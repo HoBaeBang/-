@@ -12,8 +12,8 @@
 학습을 할 생각이기 때문이다.<br>
 
 <P><strong>라이브러리 알아보기
-<p>스프링 학습일지
-  <pre>2021-04-26
+<pre><p>스프링 학습일지
+  2021-04-26
   스프링을 시작해보기 위해서 스프링 부트 라이브러리를 알아보았다.   
   1.spring-boot-starter-web   
      1)spring-boot-starter-tomcat : 웹서버인 톰켓이다.
@@ -29,6 +29,4 @@
     junit : 테스트 프레임워크
     mockito : 목 라이브러리
     assertj : 테스트 코드를 좀 더 편하게 작성하게 도와주는 라이브러리
-    spring-test : 스프링 통합 테스트 지원
-  
-<p>
+    spring-test : 스프링 통합 테스트 지원</pre>
