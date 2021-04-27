@@ -23,7 +23,7 @@
      1)spring-boot
         -spring-core
      2)spring-boot-starter-logging
-        -logback,slf4j</pre>
+        -logback,slf4j
 <p>테스트 라이브러리
   spring-boot-starter-test
     junit : 테스트 프레임워크
