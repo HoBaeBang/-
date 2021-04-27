@@ -1,10 +1,24 @@
 스프링의 이론에 대해 생각해보자
 2021-04-27
-MVC라는 것은 무엇인가?
-  MVC : Model, View, Controller를 묶어서 MVC라고 통칭한다.
+<p>MVC라는 것은 무엇인가?</p>
+  <pre>MVC : Model, View, Controller를 묶어서 MVC라고 통칭한다.
   MVC템플릿 엔진의 경우 ex)
     웹브라우저에서 localhost:8080/hello-mvc라는 입력이 들어온다
     톰켓 내장 서버 -> 스프링 컨테이너 -> 컨트롤러 -> 뷰리졸버
     ->뷰리졸버가 HTMl변환을 한후 -> 웹브라우저로 넘겨줌
-  MVC를 이용할때 위와 같은 느낌으로 실행이 된다는 것을 알아두자.
+  MVC를 이용할때 위와 같은 느낌으로 실행이 된다는 것을 알아두자.</pre>
   
+<p>API를 이용한 방법</p>
+  <pre>뷰리졸버를 사용하지 않고 대신에 HttpMessageConverter를 사용할 수 있다.
+  @RequestBody를 사용하면 뷰리졸버를 사용하지 않고
+  대신에 HTTP의 BODY에 문자 내용을 직접 반환한다(HTML BODY TAG를 말하는것이 아님)
+  @RequestBody를 사용하고, 객체를 반환하면 객체가 JSON으로 변환된다.</pre>
+ 
+<p>@ResponseBody 를 사용</p>
+  <pre>HTTP의 BODY에 문자 내용을 직접 반환
+  viewResolver 대신에 HttpMessageConverter 가 동작
+  기본 문자처리: StringHttpMessageConverter
+  기본 객체처리: MappingJackson2HttpMessageConverter
+  byte 처리 등등 기타 여러 HttpMessageConverter가 기본으로 등록되어 있음
+    참고: 클라이언트의 HTTP Accept 해더와 서버의 컨트롤러 반환 타입 정보 둘을 조합해서
+    HttpMessageConverter 가 선택된다.</pre>
